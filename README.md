@@ -41,7 +41,25 @@ Tested 4 linear regression variations:
 - **Ridge Regression (L2)** - Regularized (Adj. R²: 0.283)
 - **Polynomial Regression (deg=2)** - Non-linear terms (Adj. R²: 0.277)
 
+
+
+
+## 🛠️ Skills Demonstrated
+This project showcases practical application of:
+
+| Category | Technologies & Techniques |
+|----------|--------------------------|
+| **Statistical Modeling** | Linear Regression (OLS, Ridge, Lasso), Polynomial Regression, Cross-validation |
+| **Feature Engineering** | Composite feature creation, multicollinearity analysis (VIF), correlation analysis |
+| **Data Analysis** | pandas, NumPy, statistical inference (p-values), residual diagnostics |
+| **Data Visualization** | Matplotlib, Seaborn, correlation heatmaps, multi-panel plots |
+| **Experimental Design** | Explanatory vs. predictive modeling, full-dataset analysis for maximum insight |
+| **Validation** | 5-fold cross-validation for model stability, homoscedasticity checks |
+
+
+
 ## 📈 Results
+
 
 ### **Model Performance**
 | Model | Adjusted R² | CV R² (Stability) | Features |
@@ -81,8 +99,31 @@ Tested 4 linear regression variations:
 ### **Installation**
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/football-goal-analysis.git
+git clone https://github.com/SWMLearner/football-goal-analysis.git
 cd football-goal-analysis
 
 # Install dependencies
 pip install -r requirements.txt
+```
+
+### Run the Analysis
+
+
+Execute the main script (dataset is included in the code):
+
+```bash
+python mlregression.py
+```
+
+Note: This is an explanatory analysis (not predictive). The script will output statistical findings and generate visualizations in the assets/ folder.
+
+```bash
+football-goal-analysis/
+├── mlregression.py              # Main analysis script 
+├── README.md                    # Project documentation
+├── requirements.txt             # Python dependencies
+└── assets/                      # Generated visualizations
+    ├── correlation_matrix.png
+    └── model_analysis_dashboard.png
+```
+
