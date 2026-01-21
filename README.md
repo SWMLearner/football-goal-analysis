@@ -57,15 +57,20 @@ Tested 4 linear regression variations:
 3. **Efficiency differential** (shot accuracy gap) strongly influences outcomes
 4. **Low multicollinearity** - All VIF scores < 5
 
-### **Visual Results**
-![Feature Correlation Matrix](assets/correlation_heatmap.png)
-*Low correlations between composite features*
+### 📊 Visual Results
 
-![Model Performance Comparison](assets/model_performance.png)
-*Linear Regression (OLS) provides best explanatory power*
+**Feature Analysis:**
+![Feature Correlation Matrix](assets/correlation_matrix.png)
+*Low correlations between composite features (all < 0.7) - ideal for linear regression*
 
-![Residuals Analysis](assets/residuals_plot.png)
-*Homoscedastic residuals indicating good model fit*
+
+**Model Performance & Diagnostics:**
+![Model Analysis Dashboard](assets/model_analysis_dashboard.png)
+*Four-panel visualization showing:*
+1. **Attack Pressure vs Goals**: Primary relationship identified
+2. **Model Performance Comparison**: Linear Regression (OLS) performs best
+3. **Residuals Analysis**: Homoscedastic pattern confirms model assumptions
+4. **Actual vs Predicted**: Good alignment along the diagonal
 
 ## 🚀 How to Run
 
