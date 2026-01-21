@@ -1,2 +1,83 @@
-# football-goal-analysis
-Explanatory modeling of football goal variance using composite features and linear regression (28.3% variance explained)"
+# Football Goal Analysis: Explanatory Modeling
+
+An explanatory modeling project that identifies which in-game statistics most significantly influence total goals scored in football matches.
+
+## 🎯 Project Overview
+
+| **Aspect** | **Details** |
+|------------|-------------|
+| **Objective** | Explanatory modeling (not predictive) of goal variance |
+| **Best Model** | Linear Regression (OLS) |
+| **Variance Explained** | 28.3% (Adjusted R²) |
+| **Key Driver** | `attack_pressure` composite feature |
+| **Dataset** | 380 football matches (Kaggle) |
+| **Approach** | Composite feature engineering + linear regression variations |
+
+### 📊 Quick Insights
+- **Home Advantage**: +0.39 goals per match for home teams
+- **Primary Driver**: Attack pressure (shot efficiency metric)
+- **Model Stability**: Cross-validation R² = 0.248 ± 0.117
+- **Features**: 5 composite metrics from 65+ raw variables
+
+## 🔍 Methodology
+
+### **1. Explanatory vs Predictive Modeling**
+- **Explanatory Focus**: Understanding relationships in available data
+- **Full Dataset**: No train-test split (maximum explanatory power)
+- **Validation**: 5-fold cross-validation for stability assessment
+
+### **2. Feature Engineering**
+Created 5 composite features from raw match statistics:
+1. **`attack_pressure`** - Weighted shot efficiency metric
+2. **`efficiency_differential`** - Home vs away shot efficiency
+3. **`set_piece_threat`** - Corner-based threat indicator
+4. **`game_tempo`** - Match intensity (actions per minute)
+5. **`dominance_index`** - Log-ratio of home/away actions
+
+### **3. Model Comparison**
+Tested 4 linear regression variations:
+- **Linear Regression (OLS)** - Best performer (Adj. R²: 0.283)
+- **Lasso Regression (L1)** - Sparse solution (Adj. R²: 0.266)
+- **Ridge Regression (L2)** - Regularized (Adj. R²: 0.283)
+- **Polynomial Regression (deg=2)** - Non-linear terms (Adj. R²: 0.277)
+
+## 📈 Results
+
+### **Model Performance**
+| Model | Adjusted R² | CV R² (Stability) | Features |
+|-------|-------------|-------------------|----------|
+| Linear Regression (OLS) | **0.283** | 0.248 ± 0.117 | 5 |
+| Ridge Regression | 0.283 | 0.248 ± 0.117 | 5 |
+| Polynomial Regression | 0.277 | 0.225 ± 0.114 | 20 |
+| Lasso Regression | 0.266 | 0.251 ± 0.097 | 5 |
+
+### **Key Findings**
+1. **Attack pressure** is the most significant predictor of total goals
+2. **Home teams score 33% more** than away teams (1.60 vs 1.20 avg goals)
+3. **Efficiency differential** (shot accuracy gap) strongly influences outcomes
+4. **Low multicollinearity** - All VIF scores < 5
+
+### **Visual Results**
+![Feature Correlation Matrix](assets/correlation_heatmap.png)
+*Low correlations between composite features*
+
+![Model Performance Comparison](assets/model_performance.png)
+*Linear Regression (OLS) provides best explanatory power*
+
+![Residuals Analysis](assets/residuals_plot.png)
+*Homoscedastic residuals indicating good model fit*
+
+## 🚀 How to Run
+
+### **Prerequisites**
+- Python 3.8+
+- Kaggle account (for dataset access)
+
+### **Installation**
+```bash
+# Clone repository
+git clone https://github.com/yourusername/football-goal-analysis.git
+cd football-goal-analysis
+
+# Install dependencies
+pip install -r requirements.txt
