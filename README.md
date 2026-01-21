@@ -126,4 +126,4 @@ football-goal-analysis/
     ├── correlation_matrix.png
     └── model_analysis_dashboard.png
 ```
-
+Note: The script automatically downloads the dataset during execution, so no separate data folder is required in the repository.
