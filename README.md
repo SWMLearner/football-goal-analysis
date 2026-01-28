@@ -1,17 +1,14 @@
-# Football Goal Analysis: Explanatory Modeling
+# ⚽ Football Goal Analysis: Leveraging Domain Expertise for Explanatory Modeling
 
-An explanatory modeling project that identifies which in-game statistics most significantly influence total goals scored in football matches.
+**Combining a background in sports journalism with data science, this project moves beyond prediction to *explanation*, identifying the in-game factors that drive 28.3% of goal variance using composite feature engineering.**
 
-## 🎯 Project Overview
-
-| **Aspect** | **Details** |
+| **Aspect** | **Insight** |
 |------------|-------------|
-| **Objective** | Explanatory modeling (not predictive) of goal variance |
-| **Best Model** | Linear Regression (OLS) |
-| **Variance Explained** | 28.3% (Adjusted R²) |
-| **Key Driver** | `attack_pressure` composite feature |
-| **Dataset** | 380 football matches (Kaggle) |
-| **Approach** | Composite feature engineering + linear regression variations |
+| **Primary Objective** | **Explanatory Modeling** to understand *why*, not just predict |
+| **Key Driver Found** | `attack_pressure` (a composite shot efficiency metric) |
+| **Variance Explained** | **28.3%** of total goal variance (Adjusted R²) |
+| **Domain Insight** | Quantified home advantage at **+0.39 goals per match** |
+| **Validation** | Model stability confirmed via 5-fold cross-validation |
 
 ### 📊 Quick Insights
 - **Home Advantage**: +0.39 goals per match for home teams
