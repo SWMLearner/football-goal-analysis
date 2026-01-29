@@ -1,4 +1,5 @@
 # ⚽ Football Goal Analysis: Leveraging Domain Expertise for Explanatory Modeling
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1imjXMM3oyQBxos7czGpKQ99TOC6sTxuV)
 
 **Combining a background in sports journalism with data science, this project moves beyond prediction to *explanation*, identifying the in-game factors that drive 28.3% of goal variance using composite feature engineering.**
 
